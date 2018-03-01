@@ -1,0 +1,23 @@
+@import "../../../styles/var";
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 0 112px;
+  min-height: 720px;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+  min-height: 150px;
+  padding: 40px;
+  background-color: $light-gray;
+  flex-basis: 85%;
+}

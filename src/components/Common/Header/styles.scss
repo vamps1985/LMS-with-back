@@ -1,0 +1,181 @@
+@import "../../../styles/var";
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 128px;
+  padding: 40px;
+}
+.wrapper {
+  min-width: 1024px;
+
+  background-color: $dark-bg;
+
+
+  &--light-gray {
+    background-color: $grey-bg;
+  }
+}
+.c-header__nav-bar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 208px;
+  height: 48px;
+  font-family: $text-font;
+  margin-left: 192px;
+}
+
+.c-header__icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 48px;
+  height: 48px;
+  text-decoration: none;
+  background-color: $orange;
+  border-radius: 50%;
+
+  &-calendar {
+    background: #00ff00;
+  }
+
+  &-messenger {
+    background: #00ff00;
+  }
+
+  &-adv {
+    background: #00ff00;
+  }
+  &-clicked {
+    opacity: 0.75;
+  }
+}
+.c-header__tooltip {
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: center;
+  background: $light-green;
+  border-radius: 50%;
+
+  &-clicked {
+    display: none;
+  }
+}
+.c-header__tooltip:hover {
+  transform: scale(1.1);
+}
+.c-notifications {
+  width: 200px;
+  padding: 10px;
+  background: $cyan;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  z-index: 999;
+
+  &-hidden {
+    display: none;
+  }
+  &-pos-calendar {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  &-pos-messenger {
+    position: absolute;
+    top: 40px;
+    left: 120px;
+  }
+  &-pos-adv {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+  }
+
+  &__list {
+    padding-left: 10px;
+    font-size: 10px;
+    line-height: 1.5;
+    color: $dark-text;
+    list-style: disc;
+  }
+
+  &__item {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+.c-header__photo-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: $white;
+  border-radius: 50%;
+
+  &-circle {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+    background-color: $grey-bg;
+    border-radius: 50%;
+  }
+
+  &-semicircle {
+    width: 32px;
+    height: 16px;
+    background-color: $grey-bg;
+    border-radius: 48px 48px 0 0;
+  }
+}
+
+.c-logo {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  color: $dark-text;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: $dark-bg;
+
+  &__elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 48px;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 4px;
+
+    &-white {
+      position: relative;
+      justify-content: flex-start;
+      padding-left: 12px;
+      background: $white;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 70px;
+        width: 0;
+        height: 0;
+        border-top: 24px solid transparent;
+        border-bottom: 24px solid transparent;
+        border-left: 18px solid $white;
+        content: "";
+      }
+    }
+
+    &-orange {
+      background: $orange;
+    }
+  }
+}
+
