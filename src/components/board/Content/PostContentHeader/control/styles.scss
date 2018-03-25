@@ -1,0 +1,10 @@
+.control {
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 40px;
+  &__edit {
+    margin-top: 2px;
+  }
+}

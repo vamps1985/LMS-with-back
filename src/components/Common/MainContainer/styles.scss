@@ -15,9 +15,14 @@
 
 .main {
   width: 100%;
-  position: relative;
+  //position: relative;
   min-height: 150px;
-  padding: 40px;
+  margin-left: 40px;
   background-color: $light-gray;
   flex-basis: 85%;
+}
+
+.board {
+  flex-basis: 85%;
+  background-color: #f5f5f5;
 }

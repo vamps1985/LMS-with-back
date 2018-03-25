@@ -1,0 +1,39 @@
+@import "../../../styles/var";
+
+.Header {
+  text-align: center;
+  background: $light-gray;
+  padding: rem(25) rem(0);
+
+  &__title {
+    display: inline-block;
+    font-family: $title-font; // text-transform: uppercase;
+    color: $dark-text;
+    background: $cyan; // padding: 0 rem(8);
+    font-size: rem(56);
+    letter-spacing: rem(4); // margin: rem(16) 0;
+  }
+
+  &__last-news {
+    margin: rem(48) rem(64) rem(0);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.Header__text {
+  color: $dark-text;
+  font-weight: rem(800);
+  letter-spacing: rem(2.25);
+  font-family: $text-font;
+  font-size: rem(28);
+}
+
+.icon-add {
+  min-width: rem(33);
+  min-height: rem(33);
+  border: none;
+  border-radius: 50%;
+  background: url("./add.png") no-repeat;
+  box-shadow: rgba(100, 100, 100, .4) rem(4) rem(4) rem(8) rem(-2);
+}
