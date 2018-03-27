@@ -1,10 +1,11 @@
+@import "../../../styles/var";
 
 .post {
   display: flex;
   justify-content: space-between;
-  //font-family: $text-font;
+  font-family: $text-font;
   font-size: 18px;
-  //color: $dark-text;
+  color: $dark-text;
   min-width: 10%;
   padding: 24px 0 0 16px;
   &__user {
