@@ -1,0 +1,39 @@
+@import "../../../styles/var";
+@font-face {
+  font-family: MuseoSansCyrl;
+  src: local("MuseoSansCyrl"),
+  url(../../../fonts/MuseoSansCyrl.otf);
+}
+.change_photo {
+  width: 100%;
+  display: flex;
+
+  &__wrapper {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    width: 209px;
+    height: 32px;
+    background-color: #fafafa;
+    box-shadow: 2px 2px 5px 0 #cccccc;
+    padding-left: 65px;
+    margin-top: 12px;
+    color: #aaaaaa;
+    line-height: 33px;
+    vertical-align: middle;
+    font-family: MuseoSansCyrl, sans-serif;
+    font-size: 18px;
+  }
+}
+.camera {
+  background: url('../../../images/camera.svg') no-repeat 20px 0;
+  background-size: 32px;
+}
+
+.plus {
+  background: url('../../../images/plus.svg') no-repeat 20px 5px;
+  background-size: 22px;
+}
