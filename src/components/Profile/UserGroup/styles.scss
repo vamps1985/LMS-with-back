@@ -1,0 +1,30 @@
+@import "../../../styles/theme";
+
+.UserGroup {
+
+  width: 100%;
+
+  &__title {
+    color: $dark-text;
+    font-family: $text-font;
+    font-size: 1.75rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+    text-align: left;
+  }
+
+  &__gallery {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__users {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+}
