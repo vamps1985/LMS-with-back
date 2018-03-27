@@ -5,22 +5,22 @@ export default class PostList extends Component {
     state = {
         posts: []
     };
-    componentWillMount() {
-        fetch("http://localhost:3000/post")
-            .then(response => {
-               if (response.ok) {
-                   return response.json()
-               } else {
-                   throw new Error('Error while fetching' + response.statusText)
-               }
-            })
-            .then(data => {
-                this.setState({
-                posts: data
-            });
-            })
-            .catch( err => console.error(err))
-    }
+    // componentWillMount() {
+    //     fetch("http://localhost:3000/post")
+    //         .then(response => {
+    //            if (response.ok) {
+    //                return response.json()
+    //            } else {
+    //                throw new Error('Error while fetching' + response.statusText)
+    //            }
+    //         })
+    //         .then(data => {
+    //             this.setState({
+    //             posts: data
+    //         });
+    //         })
+    //         .catch( err => console.error(err))
+    // }
     render() {
         const {posts} = this.state;
         return (
