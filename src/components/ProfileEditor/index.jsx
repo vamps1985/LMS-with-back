@@ -118,6 +118,8 @@ export default class ProfileEditor extends Component {
 
     if (confirm("Внести изменения?")) {
 
+      this.setState({pass: "5897"});
+
       fetch(updateUrl, updated)
         .then(response => {
           if (response.ok) {
