@@ -1,0 +1,30 @@
+.pointer {
+    width: 12.5rem;
+    min-height: 1.25rem;
+    border: solid 0.0625rem transparent;
+    position: absolute;
+    left: 50%;
+  &__arrow {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 10px solid transparent;
+    align-self: center;
+    position: absolute;
+  }
+  &--down {
+    margin-top: 0.625rem;
+    border-top: 0.625rem solid #cbcbcb;
+    bottom: -25%;
+    left: 45%;
+  }
+  &--up {
+    display: inline-block;
+    margin-top: 1.125rem;
+    margin-bottom: 0.625rem;
+    border-bottom: 0.625rem solid #cbcbcb;
+    bottom: -10%;
+    left: 45%;
+  }
+}

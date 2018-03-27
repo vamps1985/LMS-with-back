@@ -1,0 +1,12 @@
+.date-stamp {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  padding-top: 8px;
+  color: #808080;
+  font-size: 12px;
+
+  &__time {
+    padding-left: 16px;
+  }
+}

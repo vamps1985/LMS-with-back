@@ -1,6 +1,6 @@
 import React from 'react';
 import routes from '@/routes';
-import LeftNav from '@/components/Common/LeftNav'
+import LeftNav from '@/components/Common/LeftNav';
 
 
 import './styles.scss';
