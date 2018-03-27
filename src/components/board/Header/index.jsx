@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './styles.scss';
 import Addpost from '@/components/board/addPost';
 
-
-
 class Header extends Component {
   constructor(props) {
     super(props)
@@ -26,11 +24,8 @@ class Header extends Component {
             <div className="Header__last-news">
               <h3 className="Header__text">[ Последние новости: ]</h3>
               <div className="icon-add" onClick={this.ButtonClick.bind(this)}/>
-
             </div>
-
             <Addpost />
-
           </div>
         );
       } else {
@@ -40,22 +35,11 @@ class Header extends Component {
             <div className="Header__last-news">
               <h3 className="Header__text">[ Последние новости: ]</h3>
               <div className="icon-add" onClick={this.ButtonClick.bind(this)}/>
-
             </div>
-
-
-
-          </div>
+         </div>
         );
 
       }
-
-
-
-
-
-
-
 } }
 
 export default Header;

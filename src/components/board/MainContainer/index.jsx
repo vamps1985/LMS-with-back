@@ -10,7 +10,6 @@ export default class MainContainer extends Component {
     return (
         <div className="post-wrapper--middle-grey">
             <Header />
-
             <PostList />
         </div>
     );

@@ -3,14 +3,8 @@ import React, { Component } from 'react';
 import Header from '@/components/Common/Header';
 import MainContainer from '@/components/Common/MainContainer';
 
-
 import '@/styles/theme.scss';
 import '@/styles/_var.scss';
-
-
-
-
-
 
 class App extends Component {
   constructor(props) {
@@ -22,18 +16,12 @@ class App extends Component {
 //   console.log(this.state)
 // }
 
-
-
-
   render() {
-
     console.log(this.props)
-
 
     return (
       <div>
         <Header />
-
         <MainContainer />
       </div>
     );
