@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.scss';
-import userpic from '@/components/Profile/userpic1.jpg';
 
-const UserPic = () => (
+
+const UserPic = ({ userpic }) => (
   <img src={ userpic } className="UserPic" alt="" />
 );
 

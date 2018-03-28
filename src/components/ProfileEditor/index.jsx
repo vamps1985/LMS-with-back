@@ -28,7 +28,7 @@ export default class ProfileEditor extends Component {
   profileUrl = 'http://localhost:3000/profile';
 
   componentDidMount() {
-    fetch(`${this.profileUrl}?id=001`)  //${this.props.id}
+    fetch(`${this.profileUrl}?${this.props.userId}`)  //${this.props.id}
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -36,7 +36,7 @@ export default class ProfileEditor extends Component {
         throw new Error("Error fetching data. Response status: " + response.status + " : " + response.statusText);
       })
       .then(array => {
-        const profile = array[0];
+        const profile = array[3];
         this.setState({
           id: profile.id,
           name: profile.name,
@@ -148,4 +148,3 @@ export default class ProfileEditor extends Component {
 }
 
 ProfileEditor.propTypes = {};
-
