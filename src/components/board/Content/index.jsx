@@ -13,7 +13,6 @@ export default class Content extends Component {
 
     state = {
         isOpen: false,
-        comments: []
     }
 
     _openComment = () => {
