@@ -1,0 +1,41 @@
+@import "../../../styles/var";
+
+.ShortUserInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__userpic {
+    height: 6rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    width: 6rem;
+  }
+
+  &__name {
+    color: $dark-text;
+    font-family: $text-font;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  &__rating {
+    color: $dark-text;
+    font-family: $text-font;
+    font-size: 0.5rem;
+    line-height: 1.5;
+  }
+
+  &__isOnline {
+    background-color: $light-green;
+    border: 2px solid $white;
+    border-radius: 50%;
+    display: block;
+    height: 1rem;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 1rem;
+    z-index: 100;
+  }
+}

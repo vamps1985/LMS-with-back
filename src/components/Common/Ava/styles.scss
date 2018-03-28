@@ -1,0 +1,40 @@
+@import "../../../styles/var";
+
+.user-ava {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 125px;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 100, .4) 4px 4px 8px -2px;
+
+  &__circle {
+    width: 30%;
+    height: 30%;
+    margin-bottom: 2px;
+    background-color: $grey-bg;
+    border-radius: 50%;
+  }
+
+  &__semicircle {
+    width: 63%;
+    height: 30%;
+    background-color: $grey-bg;
+    border-radius: 48px 48px 0 0;
+  }
+  &__tooltip {
+    margin: -8px 0 0 56px;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    text-align: center;
+    background: $light-green;
+    border: rem(2) solid $white;
+    border-radius: 50%;
+  }
+}

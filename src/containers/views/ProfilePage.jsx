@@ -1,9 +1,10 @@
 
 import React from 'react';
+import Profile from '@/components/Profile/Profile';
 
 const ProfilePage = () => (
-  <div>
-    <h1>ProFile</h1>
+  <div className="profile-container">
+    <Profile />
   </div>
 );
 
