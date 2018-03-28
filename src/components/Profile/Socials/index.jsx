@@ -6,11 +6,11 @@ import GIcon from '../SocialIcon/GIcon';
 import LikedinIcon from '../SocialIcon/LikedinIcon';
 
 
-const Socials = () => (
+const Socials = ({ facebook, googlePlus, linkedin }) => (
   <div className="Socials">
-    <FbIcon socialUrl="https://www.facebook.com/" IconWidth="3rem" IconHeight="3rem" />
-    <GIcon GsocialUrl="https://www.google.com/" GIconWidth="3rem" GIconHeight="3rem" />
-    <LikedinIcon LsocialUrl="https://www.linkedin.com/" LIconWidth="3rem" LIconHeight="3rem" />
+    <FbIcon socialUrl = { facebook } IconWidth="3rem" IconHeight="3rem" />
+    <GIcon GsocialUrl = { googlePlus } GIconWidth="3rem" GIconHeight="3rem" />
+    <LikedinIcon LsocialUrl = { linkedin } LIconWidth="3rem" LIconHeight="3rem" />
   </div>
 );
 

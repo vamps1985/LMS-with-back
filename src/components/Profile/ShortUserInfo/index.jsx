@@ -2,14 +2,14 @@ import React from 'react';
 import './styles.scss';
 import UserPic from '../UserPic';
 
-const ShortUserInfo = () => (
+const ShortUserInfo = ({ user }) => (
   <div className="ShortUserInfo">
     <div className="ShortUserInfo__userpic">
-      <UserPic />
-      <div className="ShortUserInfo__isOnline" />
+      <UserPic userpic={ user.userpic }/>
+      { user.isOnline === true && <div className="ShortUserInfo__isOnline" /> }
     </div>
-    <p className="ShortUserInfo__name">Вадим Озаринский</p>
-    <p className="ShortUserInfo__rating">[ xxx баллов ]</p>
+    <p className="ShortUserInfo__name">{user.name} {user.surname}</p>
+    <p className="ShortUserInfo__rating">[ {user.rating} баллов ]</p>
   </div>
 );
 
