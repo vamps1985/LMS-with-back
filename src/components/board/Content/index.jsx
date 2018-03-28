@@ -12,7 +12,8 @@ import './styles.scss';
 export default class Content extends Component {
 
     state = {
-        isOpen: true,
+        isOpen: false,
+        comments: []
     }
 
     _openComment = () => {
