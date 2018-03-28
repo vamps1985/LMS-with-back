@@ -2,9 +2,9 @@ import React from 'react';
 
 import './styles.scss';
 
-const Title = () => (
+const Title = ({ title }) => (
     <h3 className="post-title">
-        New Theme
+        {title}
     </h3>
 );
 export default Title;

@@ -6,9 +6,12 @@ import './styles.scss';
 
 export default class PostContentHeader extends Component {
   render(){
+
+    let { title } = this.props;
+
     return (
     <div className="contents__header">
-        <Title />
+        <Title title = { title }/>
         <Control />
     </div>
     )

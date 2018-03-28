@@ -9,13 +9,15 @@ export default class DateStamp extends Component {
         time: 0,
     };
     render (){
+        const { date, time } = this.props;
+
         return (
             <div className="date-stamp">
                 <div className="date-stamp__date">
-                    02/12/2018
+                    { date }
                 </div>
                 <div className="date-stamp__time">
-                    21:45
+                    {time}
                 </div>
             </div>
         )
