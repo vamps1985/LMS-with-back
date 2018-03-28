@@ -6,7 +6,7 @@ import './styles.scss';
 
 const Post = () => (
     <div className="post">
-      <User/>
+      <User name={'Petya'} role={'Student'} />
       <Content />
     </div>
   );

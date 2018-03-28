@@ -10,6 +10,7 @@ import './styles.scss';
      };
    }
    render() {
+       const { name, role } = this.props;
      return (
        <div className="user post__user">
          <a href="#" className="ava post-ava">
@@ -17,9 +18,9 @@ import './styles.scss';
            <div className="ava post-ava__semicircle"></div>
            <div className="ava post-ava__tooltip"></div>
          </a>
-         <h4 className="user__name"> Petya </h4>
-         <h4 className="user__role">Student</h4>
-         <h4 className="user__to-chat">Перейти<br />к чату </h4>
+         <h4 className="user__name">{name}</h4>
+         <h4 className="user__role">{role}</h4>
+         {/* <h4 className="user__to-chat">Перейти<br />к чату </h4> */}
        </div>
      );
    }

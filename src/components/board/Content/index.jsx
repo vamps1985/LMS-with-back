@@ -4,11 +4,23 @@ import DateStamp from './DateStamp';
 import ContentText from './ContentText';
 import Counter from './Counter';
 import Pointer from './Pointer';
+import CommentList from '../CommentList';
 import './styles.scss';
 
 
 
 export default class Content extends Component {
+
+    state = {
+        isOpen: true,
+    }
+
+    _openComment = () => {
+        this.setState(prevState => ({
+            isOpen: !prevState.isOpen
+        }),console.log('isOpen', this.state.isOpen))
+    }
+
   render() {
     return (
       <div className="contents post-contents">
@@ -16,7 +28,8 @@ export default class Content extends Component {
         <DateStamp />
         <ContentText />
         <Counter />
-          <Pointer />
+        {this.state.isOpen ? <CommentList /> : null}
+          <Pointer toggle={this._openComment}/>
       </div>
     );
   }
