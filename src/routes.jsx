@@ -9,11 +9,13 @@ import BoardPage from '@/containers/views/BoardPage';
 import HomeworkPage from '@/containers/views/HomeworkPage';
 import TestPage from '@/containers/views/TestPage';
 import TheoryPage from '@/containers/views/TheoryPage';
+import MainPage from '@/containers/views/main';
 
 
 export default (
   <Switch>
-    <Route exact path="/" component={ProfilePage} />
+  <Route exact path="/" component={MainPage} />
+    <Route exact path="/123" component={ProfilePage} />
     <Route exact path="/editprofile" component={EditProfile} />
     <Route exact path="/calendar" component={CalendarPage} />
     <Route exact path="/board" component={BoardPage} />

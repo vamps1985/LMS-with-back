@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.scss';
-import { Editor } from 'react-draft-wysiwyg';
-
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+// import { Editor } from 'react-draft-wysiwyg';
+//
+// import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 
 const Addpost = () => (
