@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './styles.scss';
 
+
 import UserInfo from '../UserInfo';
 import UserGroup from '../UserGroup';
 

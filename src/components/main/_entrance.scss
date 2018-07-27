@@ -1,11 +1,13 @@
 @import "mixins.scss";
+@import "../../styles/var";
+
 
 .a-entrance {
     display: flex;
     align-items: center;
     flex-direction: column;
     max-width: rem(608);
-    margin: auto;
+    justify-content: center;
     text-align: center;
     color: $white;
     font-family: $text-font;
@@ -52,6 +54,7 @@
     display: flex;
     flex-direction: row;
     justify-content: right;
+    margin-right: 50px;
     z-index: 10;
     width: 100%;
 
@@ -63,8 +66,8 @@
     &__label {
         display: block;
         width: 38%;
-        margin-right: rem(8);
-        font-size: rem(20);
+        margin-right: 30px;
+        font-size: 16px;
         text-align: right;
     }
 
