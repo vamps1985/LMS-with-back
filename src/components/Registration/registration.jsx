@@ -1,15 +1,15 @@
 import React from 'react';
-import '../main/modal-window.scss';
-import '../main/_registration.scss';
-import '../main/_entrance.scss';
+import '../Landing/modal-window.scss';
+import '../Landing/_registration.scss';
+import '../Landing/_entrance.scss';
 
-const Registration = ({handleInputChange}) => {
+const Registration = ({handleInputChange, closeModal}) => {
 
 
     return (
         <div className="wrapper__modal-window" id="modal_registration">
             <div className="modal-window">
-                <div className="close modal-window__close" id="close_registration">&#10005;</div>
+                <button className="close modal-window__close" name="registration" onClick={closeModal} id="close_registration">&#10005;</button>
                 <form method="#" className="a-entrance a-entrance--centered">
                     <h2 className="title a-entrance__title">[ регистрация _ ]</h2>
                     <div className="a-input-block a-entrance__input-block">

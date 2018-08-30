@@ -5,10 +5,19 @@
     margin: 0 auto;
     padding: 0 10px;
 }
-
+.landing__content {
+    height: calc(100% - 128px);
+    background-image: url('../../images/it.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0 0 20px 15px;
+    -moz-box-shadow: 0 0 20px 15px;
+    box-shadow: 0 0 20px 15px;
+}
 .content {
     position: relative;
     min-height: 960px;
+
 }
 
 .end-registration {
@@ -36,7 +45,9 @@
 }
 
 .wrapper {
-    min-width: 1024px;
+    //min-width: 1024px;
+    //height: 100%;
+
 
     background-color: #062037;
 

@@ -1,84 +1,92 @@
 html, body, body div, span, p, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, address, cite, code, caption, del, dfn, img, ins, kbd, q, samp, em, small, strong, sub, sup, var, b, i, dl, dt, dd, pre, abbr, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td, article, aside, figure, section, footer, header, menu, nav, time, mark, audio, video, details, summary {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 
-	font-size: 100%;
-	// font-weight: normal;
-	vertical-align: baseline;
+    font-size: 100%;
+    // font-weight: normal;
+    vertical-align: baseline;
 
-	background: transparent;
-	border: 0;
+    background: transparent;
+    border: 0;
 }
 
 main, article, aside, figure, footer, header, nav, section, details, summary {
-	display: block;
+    display: block;
 }
 
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+#root {
+    height: 100%;
 }
 
 *, *:before, *:after {
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 ul {
-	list-style: none;
+    list-style: none;
 }
 
 a {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 
-	font-size: 100%;
-	vertical-align: baseline;
+    font-size: 100%;
+    vertical-align: baseline;
 
-	background: transparent;
+    background: transparent;
 }
 
 table {
-	border-collapse: separate;
-	border-spacing: 0;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 th {
-	font-weight: bold;
-	vertical-align: bottom;
+    font-weight: bold;
+    vertical-align: bottom;
 }
 
 td {
-	font-weight: normal;
-	vertical-align: top;
+    font-weight: normal;
+    vertical-align: top;
 }
 
 input, select {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 pre {
-	word-wrap: break-word; /* IE */
-	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
 }
 
 input[type='radio'], input[type='checkbox'] {
-	vertical-align: text-bottom;
+    vertical-align: text-bottom;
 }
 
 td, td img {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 label, input[type=button], input[type=submit], input[type=file], button {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 button, input, select, textarea {
-	margin: 0;
+    margin: 0;
 }
 
 button, input[type=button] {
-	width: auto;
-	overflow: visible;
+    width: auto;
+    overflow: visible;
 }
 
 /*
