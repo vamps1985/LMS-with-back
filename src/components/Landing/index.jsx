@@ -7,14 +7,13 @@ export default class Landing extends Component {
     state = {};
 
     render() {
-        const {registration} = this.state;
         return (
 
                 <div className="wrapper landing__content">
 
                     <div className="container">
 
-                            {/*<img className="landing-image" src="@/images/it.jpg" alt=" hello"/>*/}
+                            <img className="landing-image" src="@/images/it.jpg" alt=" hello"/>
 
                     </div>
                 </div>
