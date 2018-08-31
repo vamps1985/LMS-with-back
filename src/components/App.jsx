@@ -22,6 +22,7 @@ class App extends Component {
         confirmPass: '',
         registration: false,
         showLogin: false,
+        isvalid: false
     };
 
 
@@ -31,8 +32,13 @@ class App extends Component {
         const name = evt.target.name;
         this.setState({
             [name]: value
-        })
+        }),
+        console.log(value)
+
     };
+
+
+
 
 // ButtonClick () {
 //   this.setState({isopened: !this.state.isopened})
@@ -43,7 +49,40 @@ class App extends Component {
         this.setState( {
             [name]: true
         })
+
     };
+
+
+
+registr = (evt) => {
+
+if (this.state.isvalid) {
+console.log(this.state)
+}
+
+const user = {
+  name: this.state.surname,
+  mail: this.state.email,
+  pass: this.state.password
+}
+
+fetch("/echo/json/",
+{
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    method: "POST",
+    body: JSON.stringify({a: 1, b: 2})
+})
+.then(function(res){ console.log(res) })
+.catch(function(res){ console.log(res) })
+
+
+
+};
+
+
     closeModal = (evt) => {
         const name = evt.target.name;
         this.setState( {
@@ -59,7 +98,7 @@ class App extends Component {
 
                 <Header showRegistr={this.showModal} isLogin={ isLogin }/>
                 {isLogin ? <MainContainer/> : <Landing/>}
-                {registration && <Registration closeModal={this.closeModal} handleInputChange={this.handleInputOnChange}/>}
+                {registration && <Registration closeModal={this.closeModal} handleInputChange={this.handleInputOnChange} registr={this.registr} validation={this.validation}/>}
 
             </Fragment>
 
