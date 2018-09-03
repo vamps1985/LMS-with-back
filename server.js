@@ -13,7 +13,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const passport = require('passport');
-const User = require('./models/user');
+
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
@@ -30,5 +30,5 @@ new WebpackDevServer(webpack(config), {
     return console.log(err);
   }
 
-  console.log('Listening at http://localhost: ' + port);
+  console.log('Listening at http://localhost: ' + 9000);
 });
