@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {NavLink} from "react-router-dom";
 
 const items = [
@@ -22,7 +22,7 @@ const items = [
 
 
 const NavIsLogin = () => (
-    <div>
+    <Fragment>
         <div className="c-header__nav-bar">
             {items.map(item => (
                 <NavLink
@@ -37,16 +37,17 @@ const NavIsLogin = () => (
 
                 </NavLink>
             ))}
+
         </div>
         <NavLink
             exact
             className="c-header__photo-profile"
-            to={'/'}
+            to={'/profile'}
         >
             <div className="c-header__photo-profile-circle"></div>
             <div className="c-header__photo-profile-semicircle"></div>
         </NavLink>
-    </div>
+    </Fragment>
 );
 const NavNoLogin = ({openModal}) => (
     <div>
