@@ -1,9 +1,24 @@
 @import "reset";
 @import "var";
 
-//.wrapperStyle {
-//    height: 100%;
-//}
+.wrapper {
+
+    height: calc(100vh - 128px);
+
+    &--light-gray {
+        background-color: grey;
+    }
+
+    &__modal-window {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+
+        background-color: transparentize(grey, 0.5);
+    }
+}
 
 .button-big {
     padding: rem(8) rem(56);

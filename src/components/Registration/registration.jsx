@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Landing/modal-window.scss';
 import '../Landing/_registration.scss';
-import '../Landing/_entrance.scss';
+import '../Landing/style.scss';
 
 const Registration = ({handleInputChange, closeModal, registr, validation}) => {
 

@@ -55,7 +55,7 @@
     flex-direction: row;
     justify-content: right;
     margin-right: 50px;
-    z-index: 10;
+    //z-index: 10;
     width: 100%;
 
     &:first-of-type {
@@ -84,7 +84,7 @@
 }
 
 .a-checkbox-block {
-    z-index: 10;
+    //z-index: 10;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -107,7 +107,7 @@
     display: flex;
     justify-content: space-around;
     width: rem(216);
-    z-index: 10;
+    //z-index: 10;
 
     &__link {
         @include links;
@@ -118,7 +118,7 @@
     visibility: hidden;
     color: $red;
     font-size: rem(16);
-    z-index: 10;
+    //z-index: 10;
 }
 
 .icon {

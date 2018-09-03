@@ -1,12 +1,20 @@
 import React, {Component, Fragment} from 'react';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
+import {Switch} from 'react-router-dom';
+import PrivateRoute from '@/components/PrivateRoute'
 import Header from '@/components/Common/Header';
-import MainContainer from '@/components/Common/MainContainer';
-import Landing from '@/components/Landing'
+
 
 import '@/styles/theme.scss';
 import '@/styles/_var.scss';
 import Registration from "@/components/Registration/registration";
+import MainPage from "@/containers/views/MainPage";
+import BoardPage from "@/containers/views/BoardPage";
+import ProfilePage from "@/containers/views/ProfilePage";
+import EditProfilePage from "@/containers/views/EditProfilePage";
+import TheoryPage from "@/containers/views/TheoryPage";
+import TestPage from "@/containers/views/TestPage";
+import CalendarPage from "@/containers/views/CalendarPage";
+import HomeworkPage from "@/containers/views/HomeworkPage";
 
 
 class App extends Component {
@@ -32,9 +40,7 @@ class App extends Component {
         const name = evt.target.name;
         this.setState({
             [name]: value
-        }),
-        console.log(value)
-
+        })
     };
 
 
@@ -55,6 +61,7 @@ class App extends Component {
 
 
 registr = (evt) => {
+    evt.preventDefault();
 
 if (this.state.isvalid) {
 console.log(this.state)
@@ -97,7 +104,59 @@ fetch("/echo/json/",
             <Fragment>
 
                 <Header showRegistr={this.showModal} isLogin={ isLogin }/>
-                {isLogin ? <MainContainer/> : <Landing/>}
+
+                <Switch>
+                    <PrivateRoute
+                        exact path="/"
+                        redirectTo="/board"
+                        isLogin={!isLogin}
+                        component={MainPage}
+                    />
+                    <PrivateRoute
+                        path="/board"
+                        redirectTo="/"
+                        isLogin={isLogin}
+                        component={BoardPage}
+                    />
+                    <PrivateRoute
+                        path="/"
+                        redirectTo="/profile"
+                        isLogin={isLogin}
+                        component={ProfilePage}
+                    />
+                    <PrivateRoute
+                        path="/editprofile"
+                        redirectTo="/"
+                        isLogin={isLogin}
+                        component={EditProfilePage}
+                    />
+                    <PrivateRoute
+                        path="/"
+                        redirectTo="/theory"
+                        isLogin={isLogin}
+                        component={TheoryPage}
+                    />
+                    <PrivateRoute
+                        path="/test"
+                        redirectTo="/"
+                        isLogin={isLogin}
+                        component={TestPage}
+                    />
+                    <PrivateRoute
+                        path="/calendar"
+                        redirectTo="/"
+                        isLogin={isLogin}
+                        component={CalendarPage}
+                    />
+                    <PrivateRoute
+                        path="/homework"
+                        redirectTo="/"
+                        isLogin={isLogin}
+                        component={HomeworkPage}
+                    />
+
+
+                </Switch>
                 {registration && <Registration closeModal={this.closeModal} handleInputChange={this.handleInputOnChange} registr={this.registr} validation={this.validation}/>}
 
             </Fragment>

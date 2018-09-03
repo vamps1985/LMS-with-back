@@ -5,17 +5,10 @@
   align-items: center;
   min-height: 128px;
   padding: 40px;
+    background-color: $dark-bg;
+
 }
-.wrapper {
-  min-width: 1024px;
 
-  background-color: $dark-bg;
-
-
-  &--light-gray {
-    background-color: $grey-bg;
-  }
-}
 .c-header__nav-bar {
   position: absolute;
   display: flex;

@@ -24,25 +24,19 @@ const items = [
 ];
 
 
-
 export default class Header extends Component {
 
     render() {
 
         const {isLogin, showRegistr} = this.props;
         return (
-            <div className="wrapper">
-                <div className="header">
-                    <a href="#" className="c-logo">
-                        <div className="c-logo__elem c-logo__elem-white">go</div>
-                        <div className="c-logo__elem c-logo__elem-orange">it</div>
-                    </a>
-                    <Navigation showModal={showRegistr} isLogin={isLogin} />
-                    {/*{this.props.isLogin ? <navIsLogin/> : <navNoLogin/>}*/}
-                </div>
-            </div>
-
-
+            <header className="header">
+                <a href="#" className="c-logo">
+                    <div className="c-logo__elem c-logo__elem-white">go</div>
+                    <div className="c-logo__elem c-logo__elem-orange">it</div>
+                </a>
+                <Navigation showModal={showRegistr} isLogin={isLogin}/>
+            </header>
         );
     }
 }
