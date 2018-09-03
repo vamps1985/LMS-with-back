@@ -59,11 +59,11 @@ registr = (evt) => {
 if (this.state.isvalid) {
 console.log(this.state)
 }
-
+const {surname, email, password} = this.state;
 const user = {
-  name: this.state.surname,
-  mail: this.state.email,
-  pass: this.state.password
+  name: surname,
+  mail: email,
+  pass: password
 }
 
 fetch("/echo/json/",
@@ -73,7 +73,7 @@ fetch("/echo/json/",
       'Content-Type': 'application/json'
     },
     method: "POST",
-    body: JSON.stringify({a: 1, b: 2})
+    body: JSON.stringify(user)
 })
 .then(function(res){ console.log(res) })
 .catch(function(res){ console.log(res) })
