@@ -23,7 +23,7 @@ class App extends Component {
     }
 
     state = {
-        isLogin: true,
+        isLogin: false,
         surname: '',
         email: '',
         password:'',
