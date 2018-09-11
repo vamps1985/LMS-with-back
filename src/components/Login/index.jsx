@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Login = ({checked, handleRememberMe}) => {
+
+const Login = ({checked, handleRememberMe, loginSend}) => {
+
+
+
     return (
         <form method="post" className="a-entrance">
             <h2 className="title a-entrance__title">[ вход _]</h2>
@@ -24,7 +28,11 @@ const Login = ({checked, handleRememberMe}) => {
                 <a className="a-social__link" href="#"><i className="icon icon--google"></i></a>
                 <a className="a-social__link" href="#"><i className="icon icon--linkedin"></i></a>
             </div>
-            <button className="button-big a-entrance__btn" type="submit" name="button">ВОЙТИ</button>
+            <button className="button-big a-entrance__btn" type="submit" name="button" onClick={evt => {
+        evt.preventDefault();
+        
+
+    }} >ВОЙТИ</button>
         </form>
     )
 };

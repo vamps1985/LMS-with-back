@@ -8,6 +8,14 @@ export default class Landing extends Component {
     state = {
         checked: false,
     };
+    loginSend = () => {
+        console.log("evt")
+        evt.preventDefault();
+        console.log("evt")
+        };
+
+
+
     handleRememberMe = () => {
 
         return (this.setState(prevState => ({
@@ -24,10 +32,9 @@ export default class Landing extends Component {
             <div className="wrapper landing__content">
 
 
-                    <Login handleRememberMe={this.handleRememberMe} checked={this.state.checked}/>
+                    <Login handleRememberMe={this.handleRememberMe} checked={this.state.checked}  login_send={this.loginSend}/>
             </div>
 
         );
     };
 }
-

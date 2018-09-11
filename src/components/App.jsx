@@ -60,6 +60,8 @@ class App extends Component {
 
 
 
+
+
 registr = (evt) => {
     evt.preventDefault();
 
@@ -157,7 +159,7 @@ fetch("/echo/json/",
 
 
                 </Switch>
-                {registration && <Registration closeModal={this.closeModal} handleInputChange={this.handleInputOnChange} registr={this.registr} validation={this.validation}/>}
+                {registration && <Registration closeModal={this.closeModal} handleInputChange={this.handleInputOnChange} registr={this.registr}  validation={this.validation}/>}
 
             </Fragment>
 
