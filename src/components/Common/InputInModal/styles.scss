@@ -1,0 +1,96 @@
+@import "../../../styles/var";
+
+.input-block-wrapper {
+  width: 100%;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.input-block {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  font-family: $text-font; 
+}
+
+.input-block:hover:before {
+  display: block;
+  content: attr(data-description);
+  position: absolute;
+  top: -20px;
+  left: 30%;
+  z-index: 1000;
+  width: 100%;
+  word-wrap: break-word;
+  color: $orange;
+  font-size: rem(10);
+  text-align: left;
+  padding: rem(5) 0;
+}
+.input-block:after {
+  visibility: hidden;
+  content: '\2713 ';
+  color: $light-green;
+  right: 0;
+  font-size: rem(20);
+  margin-left: 8px;
+}
+
+.valid:after {
+  visibility: visible;
+}
+
+.input-label {
+  display: block;
+  width: 25%;
+  font-size: 16px;
+  text-align: right; 
+  color: $white;
+}
+
+.form-input {
+  width: 75%;
+  border: 1px solid transparent;
+  outline: none;
+  padding-left: rem(16);
+  color: $dark-bg; 
+  background-color: #838b93;
+  opacity: .8;
+  font-size: rem(20);
+  line-height: 1.5;
+  position: relative;
+  margin-left: 30px;
+}
+
+.required-star::after {
+  content: '*';
+  color: $orange;
+  padding: 4px;
+}
+
+.checkbox-block {
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: $text-font;
+  margin-bottom: 16px;
+}
+
+.checkbox-block .input-label {
+  width: 75%;
+  margin-left: 30px;
+  text-align: left;
+}
+
+.checkbox-block .form-input {
+  width: 16px;
+  height: 16px;
+  font-size: rem(40);
+  text-align: right;
+  margin-left: calc(25% - 26px);
+}
+
+.no-valid {
+  border: 1px solid $red;
+}

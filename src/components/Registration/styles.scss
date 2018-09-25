@@ -1,0 +1,53 @@
+@import "../../styles/var";
+
+.registration-form {
+  position: relative;
+}
+
+.policyLink {
+  color: $orange;
+  display: block;
+  text-decoration: none;
+  font-family: $text-font;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  display: block;
+  min-height: rem(70);
+  color: $red;
+  font-family: $text-font;
+  font-size: 12px; 
+  margin-bottom: 16px; 
+}
+
+.registration-social-icon {
+  max-height: 2rem;
+  max-width: 2rem;
+  margin-right: 2rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  svg {
+    fill: $cyan;
+  }
+
+  svg:hover #fbcircle,
+  svg:hover #fb,
+  svg:hover #google-svg,
+  svg:hover #LikedinIcon-circle,
+  svg:hover #LikedinIcon {
+    fill: #ff6c00;
+  }
+}
+
+.registration-social-block {
+  margin: rem(24) auto;
+}

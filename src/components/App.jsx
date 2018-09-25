@@ -23,7 +23,7 @@ class App extends Component {
     }
 
     state = {
-        isLogin: true,
+        isLogin: false,
         surname: '',
         email: '',
         password:'',
@@ -38,6 +38,7 @@ class App extends Component {
     handleInputOnChange = (evt) => {
         const value = evt.target.value;
         const name = evt.target.name;
+
         this.setState({
             [name]: value
         })
