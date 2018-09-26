@@ -12,14 +12,14 @@ const INITIAL_STATE = {
   email: '',
   password: '',
   confirmPass: '',
-  privatpolicy: false,
+  policy: false,
   formErrors: {
     name: '',
     surname: '',
     email: '',
     password: '',
     confirmPass: '',
-    privatpolicy: '',
+    policy: '',
   },
   nameValid: false,
   surnameValid: false,
@@ -27,6 +27,7 @@ const INITIAL_STATE = {
   passwordValid: false,
   confirmPassValid: false,
   formValid: false,
+  policyValid: false,
 };
 
 class Registration extends Component {
@@ -35,7 +36,7 @@ class Registration extends Component {
   };
 
   handleInputChange = evt => {
-    const value = evt.target.value;
+    const value = evt.target.type === 'checkbox' ? evt.target.checked : evt.target.value;
     const name = evt.target.name;
 
     this.setState({ [name]: value }, () => {
@@ -50,14 +51,16 @@ class Registration extends Component {
     let emailValid = this.state.emailValid;
     let passwordValid = this.state.passwordValid;
     let confirmPassValid = this.state.confirmPassValid;
+    let policyValid = this.state.policyValid;
     let password = this.state.password;
+    let confirmPass = this.state.confirmPass;
 
     switch (fieldName) {
       case 'name':
         nameValid = value.match(
           /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/i,
-        );
-
+        ) ? true : false;
+console.log(nameValid);
         fieldValidationErrors.name = nameValid
           ? ''
           : ' Имя должно начинаться с заглавной буквы и не содержать цифр.';
@@ -65,7 +68,7 @@ class Registration extends Component {
 
         case 'surname':
         surnameValid = value.match(
-          /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/i);
+          /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/i) ? true : false;
 
         fieldValidationErrors.surname = surnameValid
           ? ''
@@ -73,18 +76,27 @@ class Registration extends Component {
         break;
         
         case 'email':
-        emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+        emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) ? true : false;
         fieldValidationErrors.email = emailValid ? '' : ' Введите существующий E-mail';
         break;
         
         case 'password':
         passwordValid = value.length >= 5 && value.length <= 32;
         fieldValidationErrors.password = passwordValid ? '' : 'Пароль должен содержать минимум 5 символов';
+
+        if (passwordValid && confirmPass !== '') {
+        confirmPassValid = value === confirmPass;
+        fieldValidationErrors.confirmPass = confirmPassValid ? '' : 'Введенные Вами пароли не совпадают'; } 
         break;
 
         case 'confirmPass':
         confirmPassValid = value === password;
         fieldValidationErrors.confirmPass = confirmPassValid ? '' : 'Введенные Вами пароли не совпадают'; 
+        break;
+
+        case 'policy':
+        policyValid = value;
+        fieldValidationErrors.policy = policyValid ? '' : 'Ознакомьтесь и согласитесь с политикой о конфиденциальности'; 
         break;
         
         default:
@@ -98,6 +110,7 @@ class Registration extends Component {
         emailValid: emailValid,
         passwordValid: passwordValid,
         confirmPassValid: confirmPassValid,
+        policyValid: policyValid,
       },
       this.validateForm,
     );
@@ -105,14 +118,14 @@ class Registration extends Component {
 
   validateForm() {
     this.setState({
-      formValid: this.state.nameValid && this.state.surnameValid &&this.state.emailValid && this.state.passwordValid && this.state.confirmPassValid,
+      formValid: this.state.nameValid && this.state.surnameValid &&this.state.emailValid && this.state.passwordValid && this.state.confirmPassValid && this.state.policyValid,
     });
   }
 
   registration= (evt) => {
     evt.preventDefault();
 
-    const { name, surname, email, password, confirmPass, formValid } = this.state;
+    const { name, surname, email, password, formValid } = this.state;
 
     if (formValid) {
       const newUser = {
@@ -137,7 +150,7 @@ class Registration extends Component {
   }
 
   render() {
-    const { name, surname, email, password, confirmPass } = this.state;
+    const { name, surname, email, password, confirmPass, policy, nameValid, surnameValid, emailValid, passwordValid, confirmPassValid, policyValid, formValid } = this.state;
     const { closeModal } = this.props;
 
     return (
@@ -210,6 +223,8 @@ class Registration extends Component {
             description=""
             req="required"
             handleInputChange={this.handleInputChange}
+            noValid = {this.state.formErrors.policy}
+            checked = {policy}
           />
           <a href="#" className="policyLink">
             Политика конфиденциальности
@@ -223,6 +238,7 @@ class Registration extends Component {
             name="submitRegistration"
             onClick={this.registration}
             cls="button-small"
+            disabled={!formValid}
           />
           <Socials
             facebook="#"

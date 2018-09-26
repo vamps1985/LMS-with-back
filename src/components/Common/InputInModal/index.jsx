@@ -11,7 +11,8 @@ const InputInModal = ({
   description,
   req,
   value,
-  noValid
+  noValid,
+  checked,
 }) => (
   <div className='input-block-wrapper'>
   <div
@@ -21,7 +22,7 @@ const InputInModal = ({
       {label}
     </label>
     <input
-      className={`form-input ${ noValid && 'no-valid'}`}
+      className={`form-input ${ noValid.length !== 0 && 'no-valid'}`}
       type={type}
       name={inputName}
       id={inputName}
@@ -30,27 +31,36 @@ const InputInModal = ({
       required={req}
       data-description={description}
       value = {value}
+      checked = {checked}
     />
   </div>
   </div>
 );
 
 InputInModal.defaultProps = {
+  type: 'text',
   label: '',
   inputName: '',
   placeholder: '',
   description: '',
   required: '',
   handleInputChange: () => {},
+  value: '',
+  noValid: '',
+  checked: false,
 };
 
 InputInModal.propTypes = {
+  type: PropTypes.string,
   handleInputChange: PropTypes.func,
   label: PropTypes.string,
   inputName: PropTypes.string,
   placeholder: PropTypes.string,
   description: PropTypes.string,
   required: PropTypes.string,
+  value: PropTypes.string,
+  noValid: PropTypes.string,
+  checked: PropTypes.bool,
 };
 
 export default InputInModal;

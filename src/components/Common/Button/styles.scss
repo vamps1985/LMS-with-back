@@ -5,15 +5,8 @@
   url(../../../fonts/BebasNeue_Regular.otf);
 }
 
-.button  {
-  height: 64px;
-  width: 313px;
-  background-color: #ff6d00;
-  border: none;
-  border-radius: 15px;
-  color: $white;
-  font-family: BebasNeue_Regular, sans-serif;
-  font-size: 35px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+button:disabled {
+  background-color: $grey-bg;
+  cursor: not-allowed;
+  pointer-events: none;
 }
