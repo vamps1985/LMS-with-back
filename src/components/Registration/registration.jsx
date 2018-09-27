@@ -150,7 +150,7 @@ console.log(nameValid);
   }
 
   render() {
-    const { name, surname, email, password, confirmPass, policy, nameValid, surnameValid, emailValid, passwordValid, confirmPassValid, policyValid, formValid } = this.state;
+    const { name, surname, email, password, confirmPass, policy, formValid } = this.state;
     const { closeModal } = this.props;
 
     return (
