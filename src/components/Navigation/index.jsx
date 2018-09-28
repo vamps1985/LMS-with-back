@@ -52,7 +52,7 @@ const NavIsLogin = () => (
 const NavNoLogin = ({openModal}) => (
     <div>
         <form className="" action="index.html" method="post">
-            <button className="button-small" id="open_login" type="button" name="login">Log In
+            <button className="button-small" id="open_login" type="button" name="login" onClick={openModal}>Log In
             </button>
             <button className="button-small" id="open_signin" onClick={openModal} type="button"
                     name="registration">Sign In

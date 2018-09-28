@@ -1,0 +1,35 @@
+@import "../../styles/var";
+
+.login-form {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-error-message {
+  display: block;
+  min-height: rem(20);
+  color: $red;
+  font-family: $text-font;
+  font-size: 12px; 
+  margin-bottom: 16px; 
+  text-align: center;
+}
+
+.forgot-password-link {
+  color: $orange;
+  font-family: $text-font;
+  font-size: rem(16);
+  text-decoration: none;
+}
+
+.forgot-password-link:hover,
+.forgot-password-link:focus {
+  color: $cyan;
+}
+
+.formErrors {
+  text-align: center;
+  margin-bottom: 16px; 
+}

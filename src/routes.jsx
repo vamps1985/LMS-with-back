@@ -9,6 +9,7 @@ import HomeworkPage from '@/containers/views/HomeworkPage';
 import TestPage from '@/containers/views/TestPage';
 import TheoryPage from '@/containers/views/TheoryPage';
 import MainPage from '@/containers/views/MainPage';
+import RestorePassword from '@/components/RestorePassword'
 
 
 export default (
@@ -21,6 +22,7 @@ export default (
         <Route exact path="/homework" component={HomeworkPage}/>
         <Route exact path="/test" component={TestPage}/>
         <Route exact path="/theory" component={TheoryPage}/>
+        <Route exact path="/restore-password" component={RestorePassword}/>
         <Route render={() => <h1>PAGE NOT FOUND!</h1>}/>
     </Switch>
 );

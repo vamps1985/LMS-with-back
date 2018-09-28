@@ -28,14 +28,14 @@ export default class Header extends Component {
 
     render() {
 
-        const {isLogin, showRegistr} = this.props;
+        const {isLogin, showModal} = this.props;
         return (
             <header className="header">
                 <a href="#" className="c-logo">
                     <div className="c-logo__elem c-logo__elem-white">go</div>
                     <div className="c-logo__elem c-logo__elem-orange">it</div>
                 </a>
-                <Navigation showModal={showRegistr} isLogin={isLogin}/>
+                <Navigation showModal={showModal} isLogin={isLogin}/>
             </header>
         );
     }

@@ -194,6 +194,13 @@
       "userpic": "https://s3.amazonaws.com/uifaces/faces/twitter/tjisousa/128.jpg",
       "group": "Группа FE#2",
       "rating": 775
+    },
+    {
+      "id": "qwert@qwert.com",
+      "name": "qwert",
+      "surname": "qwert",
+      "email": "qwert@qwert.com",
+      "password": "qwert"
     }
   ],
   "course": [

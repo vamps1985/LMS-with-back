@@ -28,6 +28,8 @@ const INITIAL_STATE = {
   confirmPassValid: false,
   formValid: false,
   policyValid: false,
+  registrationOK: false,
+  emailError: false,
 };
 
 class Registration extends Component {
@@ -60,7 +62,7 @@ class Registration extends Component {
         nameValid = value.match(
           /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/i,
         ) ? true : false;
-console.log(nameValid);
+
         fieldValidationErrors.name = nameValid
           ? ''
           : ' Имя должно начинаться с заглавной буквы и не содержать цифр.';
@@ -129,13 +131,14 @@ console.log(nameValid);
 
     if (formValid) {
       const newUser = {
+        id: email,
         name: name, 
         surname: surname,
         email: email,
         password: password
       } 
 
-      fetch("/echo/json/",
+      fetch("http://localhost:3000/profile",
       {
         headers: {
           'Accept': 'application/json',
@@ -144,13 +147,24 @@ console.log(nameValid);
         method: "POST",
         body: JSON.stringify(newUser)
       })
-      .then(function(res){ console.log(res); console.log('Вы зарегистрировались!'); })
+      .then(({ status }) => {
+        if (status === 201) {
+          this.setState({
+            registrationOK: true,
+          })
+        } else {
+          console.log('MailError')
+          this.setState({
+            emailError: true,
+          })
+        }
+      })
       .catch(function(res){ console.log(res) })
     }
   }
 
   render() {
-    const { name, surname, email, password, confirmPass, policy, formValid } = this.state;
+    const { name, surname, email, password, confirmPass, policy, formValid, emailError } = this.state;
     const { closeModal } = this.props;
 
     return (
@@ -159,6 +173,7 @@ console.log(nameValid);
         title="Регистрация _ "
         closeModal={closeModal}>
         <form method="#" className="registration-form">
+          { emailError && <div className="mailError">Пользователь с таким E-mail уже существует.</div> }
           <InputInModal
             type="text"
             label="Имя"

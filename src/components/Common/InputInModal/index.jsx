@@ -25,7 +25,7 @@ const InputInModal = ({
       className={`form-input ${ noValid.length !== 0 && 'no-valid'}`}
       type={type}
       name={inputName}
-      id={inputName}
+      // id={inputName}
       placeholder={placeholder}
       onChange={handleInputChange}
       required={req}
