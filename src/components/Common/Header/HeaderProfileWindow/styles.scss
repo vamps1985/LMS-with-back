@@ -1,0 +1,96 @@
+@import "../../../../styles/var";
+
+.HeaderProfileWindow {
+    position: absolute;
+    top: 0;
+    min-width: 280px;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px grey;
+    z-index: 999;
+
+    &__hidden {
+        display: none;
+    }
+    &__close {
+        position: absolute;
+        right: 24px;
+        top: 16px;
+        width: 16px;
+        height: 16px;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+    &__close:hover {
+        opacity: 1;
+    }
+    &__close:before, &__close:after {
+        content:'';
+        position: absolute;
+        left: 16px;
+        height: 16px;
+        width: 2px;
+        background-color: #000;
+        transform: rotate(45deg);
+    }
+    &__close:after {
+        transform: rotate(-45deg);
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        //justify-content: ;
+        align-items: center;
+        height: 136px;
+        padding: 16px;
+        padding-bottom: 8px;
+        font-family: $text-font;
+        color: $dark-text;
+    }
+    &__photo {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 2px $grey-bg;
+    }
+    &__name {
+        font-weight: bold;
+    }
+    &__email {
+        font-size: 14px;
+        text-decoration: none;
+    }
+    
+    &__buttonBlock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+    }
+    &__button {
+        padding: 8px 16px;
+        font-family: $title-font;
+        //font-size: 12px;
+        //font-weight: bold;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: $white;
+        background-color: $grey-pholder;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+        &__sign-in {
+            padding: 8px 24px;
+        }
+        &__my-profile {
+            background-color: $orange;
+        }
+    }
+}

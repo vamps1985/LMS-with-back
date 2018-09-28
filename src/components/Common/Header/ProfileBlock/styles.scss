@@ -1,0 +1,15 @@
+@import "../../../../styles/var";
+
+.ProfileBlock {
+    display: flex;
+    flex-direction: column;
+
+    &__my-profile, &__sign-out {
+        padding-right: 16px;
+        font-family: $text-font;
+        text-align: right;
+        color: $cyan;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+}

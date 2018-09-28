@@ -5,14 +5,10 @@ import './styles.scss';
 
 export default class Counter extends Component {
     render() {
-        const {likes, comments} = this.props;
-        const countComments = comments ? comments.length : 0;
-
-        console.log("comments", countComments);
         return (
             <div className="counter">
-                <LikeIcon likes={likes} />
-                <CommentIcon  countComment = {countComments}/>
+                <LikeIcon />
+                <CommentIcon />
             </div>
         )
     }

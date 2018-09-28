@@ -1,0 +1,25 @@
+@import "../../../../styles/var";
+
+.NavBar__icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    background-color: $orange;
+    border-radius: 50%;
+    
+    &-calendar {
+      background: url(img/calendar-icon.svg) no-repeat center;
+    }
+    &-messenger {
+      background: url(img/messenger-icon.svg) no-repeat center;
+    }  
+    &-board {
+      background: url(img/adv-icon.svg) no-repeat center;
+    }
+    &-clicked {
+      opacity: 0.75;
+    }
+}

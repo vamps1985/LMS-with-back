@@ -8,7 +8,6 @@
   color: $dark-text;
   min-width: 10%;
   padding: 24px 0 0 16px;
-  background-color: $light-gray;
 
   &__user {
     margin: 0 24px;
@@ -20,9 +19,6 @@
 
   &__pointer {
     margin: 0 auto;
-  }
-  &--middle-grey {
-    background-color: $middle-grey;
   }
 }
 

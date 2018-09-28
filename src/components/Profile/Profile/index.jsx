@@ -51,7 +51,7 @@ export default class Profile extends Component {
       });
   }
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     const { id, name, surname, email, facebook, googlePlus, linkedin, userpic, group, groupstudents } = this.state;
     return (
       <div className="Profile__contant">

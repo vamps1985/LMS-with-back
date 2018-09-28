@@ -1,0 +1,39 @@
+@import "../../../../styles/var";
+
+.NavBar__notification {
+    width: 200px;
+    padding: 10px;
+    background: $cyan;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    z-index: 9999;
+  
+    &-pos-calendar {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+    }
+    &-pos-messenger {
+      position: absolute;
+      top: 40px;
+      left: 120px;
+    }
+    &-pos-adv {
+      position: absolute;
+      top: 40px;
+      left: 200px;
+    }
+  
+    &__list {
+      padding-left: 10px;
+      font-size: 10px;
+      line-height: 1.5;
+      color: $dark-text;
+      list-style: disc;
+    }
+  
+    &__item {
+      font-weight: bold;
+      cursor: pointer;
+    }
+}

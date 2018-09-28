@@ -2,12 +2,11 @@ import React from 'react';
 import iconLikes from '@/components/board/Like.png';
 import './styles.scss';
 
-const LikeIcon = ({likes}) => {
-
+const LikeIcon = () => {
     return (
         <div className="counter__likes">
             <img className="icon counter__icon icon--likes" src={iconLikes} alt=""/>
-            <span className="counter__likes">{likes}</span>
+            <span className="counter__likes">0</span>
             <span>Likes</span>
         </div>
     )

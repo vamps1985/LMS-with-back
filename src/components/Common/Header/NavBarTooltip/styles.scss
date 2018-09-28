@@ -1,0 +1,19 @@
+@import "../../../../styles/var";
+
+.NavBar__tooltip {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    text-align: center;
+    background: $light-green;
+    border-radius: 50%;
+  
+    &-clicked {
+      display: none;
+    }
+  }
+  .NavBar__tooltip:hover {
+    transform: scale(1.1);
+  }
