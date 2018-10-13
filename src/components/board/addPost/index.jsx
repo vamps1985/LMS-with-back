@@ -13,7 +13,7 @@ const Addpost = () => (
         </div>
         <div className="add-post__theme">
             <label className="add-post__label">Тема объявления:
-                <input type="text" className="add-post__input" id="postTheme" placeholder=""/>
+                <input type="text" className="add-post__input" id="postTheme" placeholder="" />
             </label>
         </div>
         <Editor
